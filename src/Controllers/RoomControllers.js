@@ -78,6 +78,6 @@ exports.deleteRoom = async (req, res) => {
             message: " room deleted succesfully"
         })
     } catch (error) {
-        res.status(500).send(error.message)
+       
     }
 }

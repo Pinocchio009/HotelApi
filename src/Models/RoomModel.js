@@ -8,16 +8,18 @@ const HotelSchema = new Schema ({
     },
     RoomType: {
         type: String,
-        required: true,
+        enum: ['big', 'small'],
+        default: "small",
         trim: true
     },
     price: {
         type: Number,
         required: true
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
+    role: {
+        type: String,
+        enum: ["guest", "admin"],
+        default: "guest"
     }
 }, {timestamps: true}
 );
